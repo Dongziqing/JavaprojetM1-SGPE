@@ -17,4 +17,4 @@ In today's educational environment, teachers need to effectively manage students
 
  ## Authors
  * Dongziqing
- * Arlette
+ * SOUFO DJUIKUI Arlette
