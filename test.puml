@@ -1,0 +1,243 @@
+@startuml
+class com.sgms.app.LoginApplication {
++ void start(Stage)
++ {static} void main(String[])
+}
+class com.sgms.controller.RegisterController {
+- BaseDao baseDao
+- UserInformationDao userInformationDao
+- ComboBox job
+- TextField id
+- TextField name
+- PasswordField password
+~ void onRegisterClick()
+}
+class com.sgms.dao.StudentGradeDao {
+- UserInformation userInformation
++ ResultSet searchAllGrade()
++ ResultSet searchGrade()
++ ResultSet keywordSearch(String)
++ void insertGrade(Object,Date,String,String,String,String,String)
++ ResultSet keywordSearchAll(String)
++ void updateAllGrade(ObservableList<StudentGrade>)
++ void delstugrade(StudentGrade)
+}
+class com.sgms.dao.GroupDao {
++ ResultSet searchAllGroup()
++ ResultSet searchByGroup(String)
++ void insertStuGroup(int,String,String,String,int)
++ void deleteGroup(StudentGroup)
++ void updateGroup(StudentGroup)
+}
+class com.sgms.dao.UserInformationDao {
++ ResultSet searchAllUser()
++ boolean addNewUser(String,String,String,String)
++ void modifyUser()
+}
+class com.sgms.dao.BaseDao {
+- {static} String PROPERTIES_FILE
+- {static} String URL
+- {static} String userName
+- {static} String password
+- {static} String driver
+- {static} void initBaseDao()
++ Connection getCon()
+- {static} Properties loadProperties()
+}
+class com.sgms.controller.Main {
++ void start(Stage)
+}
+class com.sgms.dao.ProjectDao {
++ ResultSet searchAllProject()
++ void insertProject(String,String,Date)
++ void delProject(Project)
++ ResultSet getProjectInfo()
+}
+class com.sgms.controller.Register {
++ void start(Stage)
+}
+class com.sgms.controller.SearchController {
+- TableView<StudentGrade> gradeTable
+- TableColumn<StudentGrade,Date> date
+~ TableColumn<StudentGrade,String> java
+~ TableColumn<StudentGrade,String> sar
+~ TableColumn<StudentGrade,String> marketing
+~ TableColumn<StudentGrade,String> ml
+~ TableColumn<StudentGrade,String> nameCol
+~ TextField content
+- StudentGrade delStu
+- ObservableList<StudentGrade> cellData
+- BaseDao baseDao
+- UserInformation userInformation
+- StudentGradeDao studentGradeDao
+- GroupDao groupDao
+- ProjectDao projectDao
+- void onSearchClick()
+~ void onDelClick()
+}
+class com.sgms.pojo.Formation {
+- String formId
+- String formName
+- String formType
++ String getFormId()
++ String getFormName()
++ String getFormType()
++ void setFormId(String)
++ void setFormName(String)
++ void setFormType(String)
+}
+class com.sgms.pojo.Project {
+- int projectId
+- String subjectName
+- String topic
+- Date dueDate
++ int getProjectId()
++ String getSubjectName()
++ void setProjectId(int)
++ void setSubjectName(String)
++ String getTopic()
++ void setTopic(String)
++ Date getDueDate()
++ void setDueDate(Date)
+}
+class com.sgms.controller.Search {
++ void start(Stage)
+}
+class com.sgms.controller.MainController {
+~ UserInformation userInformation
+~ Text name
+~ Text id
+- TableView<StudentGrade> gradeTable
+- TableView<Formation> formTable
+- TableView<StudentGroup> groupTable
+- TableView<Project> projectTable
+- TableColumn<StudentGrade,Date> date
+~ TableColumn<StudentGrade,String> java
+~ TableColumn<StudentGrade,String> sar
+~ TableColumn<StudentGrade,String> marketing
+~ TableColumn<StudentGrade,String> ml
+~ TableColumn<StudentGrade,String> nameCol
+~ TableColumn<StudentGrade,Integer> numCol
+~ TableColumn<StudentGrade,String> fid
+- ObservableList<StudentGrade> cellData
+- BaseDao baseDao
+- UserInformationDao userInformationDao
+- GroupDao groupDao
+- FormationDao formationDao
+- StudentGradeDao studentGradeDao
+- ProjectDao projectDao
++ StudentGrade delStu
++ Formation delForm
++ StudentGroup studentGroup
++ Project delProject
++ void onShowClick()
+~ void onaddclick()
+~ void onModifyInfClick()
+~ void onSearchClick()
+~ void onDelClick()
++ void onShowFormClick()
++ void onShowGroupClick()
++ void onShowProjectClick()
+}
+class com.sgms.pojo.StudentGrade {
+- String name
+- Date date
+- String java
+- String sar
+- String marketing
+- String ml
+- Integer id
+- String fid
++ Integer getId()
++ void setId(Integer)
++ void setName(String)
++ String getName()
++ Date getDate()
++ String getFid()
++ String getJava()
++ String getSar()
++ String getMarketing()
++ String getMl()
++ void setDate(String)
++ void setFid(String)
++ void setJava(String)
++ void setSar(String)
++ void setMarketing(String)
++ void setMl(String)
++ String toString()
+}
+class com.sgms.utils.MyUtils {
++ {static} String FXML_PATH
++ {static} float finalScore(String,String,int)
++ {static} HashMap<String,String> genHashMap(ResultSet,String,String)
++ {static} int calculateDaysBetween(Date,Date)
++ {static} boolean isEmpty(String)
++ {static} String toUpperCase(String)
++ {static} String capitalizeFirstLetter(String)
+}
+class com.sgms.dao.FormationDao {
++ ResultSet searchAllFormation()
++ void insertFormation(String,String,String)
++ void delFormation(Formation)
+}
+class com.sgms.controller.LoginController {
+# TextField id
+# PasswordField password
+# Label errorlabel
+- BaseDao baseDao
+- UserInformationDao userInformationDao
++ {static} boolean login
+# void onLoginClick()
+~ void onRegisterClick()
+}
+class com.sgms.pojo.UserInformation {
+- String name
+- String id
+- String job
+- String password
+- String newPassword
+- {static} UserInformation USER_INFORMATION
++ void setNewPassword(String)
++ String getNewPassword()
++ void setPassword(String)
++ String getPassword()
++ void setJob(String)
++ String getJob()
++ {static} UserInformation getUser()
++ String getName()
++ String getId()
++ void setName(String)
++ void setId(String)
+}
+class com.sgms.pojo.StudentGroup {
+- Integer groupListId
+- Integer groupId
+- String projectName
+- String student1Name
+- String student2Name
+- Integer projectGrade
++ Integer getGroupListId()
++ Integer getGroupId()
++ String getProjectName()
++ String getStudent1Name()
++ String getStudent2Name()
++ Integer getProjectGrade()
++ void setGroupListId(int)
++ void setGroupId(int)
++ void setProjectName(String)
++ void setStudent1Name(String)
++ void setStudent2Name(String)
++ void setProjectGrade(int)
+}
+
+
+javafx.application.Application <|-- com.sgms.app.LoginApplication
+com.sgms.dao.BaseDao <|-- com.sgms.dao.StudentGradeDao
+com.sgms.dao.BaseDao <|-- com.sgms.dao.GroupDao
+com.sgms.dao.BaseDao <|-- com.sgms.dao.UserInformationDao
+javafx.application.Application <|-- com.sgms.controller.Main
+com.sgms.dao.BaseDao <|-- com.sgms.dao.ProjectDao
+javafx.application.Application <|-- com.sgms.controller.Register
+javafx.application.Application <|-- com.sgms.controller.Search
+com.sgms.dao.BaseDao <|-- com.sgms.dao.FormationDao
+@enduml

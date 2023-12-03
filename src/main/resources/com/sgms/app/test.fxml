@@ -1,0 +1,78 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import javafx.scene.paint.*?>-->
+<!--<?import javafx.scene.text.*?>-->
+<!--<?import java.lang.*?>-->
+<!--<?import java.util.*?>-->
+<!--<?import javafx.scene.*?>-->
+<!--<?import javafx.scene.control.*?>-->
+<!--<?import javafx.scene.layout.*?>-->
+
+<!--<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"-->
+<!--            fx:controller="com.sgms.studentgrade.Test">-->
+<!--    <children>-->
+<!--        <Label layoutX="21.0" layoutY="67.0" text="id:">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="21.0" layoutY="128.0" text="Nom:">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="21.0" layoutY="254.0" text="Password Original:">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="202.0" layoutY="14.0" text="Modification des informations personnelles" textFill="#d61717">-->
+<!--            <font>-->
+<!--                <Font size="26.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <TextField layoutX="370.0" layoutY="68.0" promptText="Veuillez saisir votre nouveau id:"/>-->
+<!--        <TextField layoutX="370.0" layoutY="129.0"/>-->
+<!--        <TextField layoutX="370.0" layoutY="192.0"/>-->
+<!--        <Button layoutX="498.0" layoutY="329.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="80.0"-->
+<!--                text="Confirmation des changements"/>-->
+<!--        <PasswordField layoutX="370.0" layoutY="255.0" prefHeight="30.0" prefWidth="202.0"/>-->
+<!--        <PasswordField layoutX="111.0" layoutY="255.0" prefHeight="30.0" prefWidth="144.0"/>-->
+<!--        <Label layoutX="280.0" layoutY="254.0" text="New Password:">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="111.0" layoutY="67.0" text="angel">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="21.0" layoutY="340.0" text="Veuillez ne pas remplir le contenu sans le modifier"-->
+<!--               textFill="#d30909">-->
+<!--            <font>-->
+<!--                <Font size="18.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="114.0" layoutY="128.0" text="Angel">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="114.0" layoutY="191.0" text="11">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="280.0" layoutY="67.0" text="New id:">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--        <Label layoutX="292.0" layoutY="128.0" text="Nom:">-->
+<!--            <font>-->
+<!--                <Font size="24.0"/>-->
+<!--            </font>-->
+<!--        </Label>-->
+<!--    </children>-->
+<!--</AnchorPane>-->

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0"
+      prefWidth="898.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sgms.controller.MainController">
+    <children>
+        <Label layoutX="197.0" layoutY="6.0" prefHeight="63.0" prefWidth="504.0" text="Bienvenue dans le SGPE"
+               textAlignment="CENTER">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Label>
+
+        <Label layoutX="16.0" layoutY="200.0" text="Nom:" textFill="blue">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="16.0" layoutY="260.0" prefHeight="37.0" prefWidth="63.0" text="Id:" textFill="blue">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Text id="name" fx:id="name" layoutX="17.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="angel">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Text>
+        <Text id="id" fx:id="id" layoutX="17.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NULL">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Text>
+        <TableView fx:id="gradeTable" layoutX="100.0" layoutY="74.0" prefHeight="547.0" prefWidth="623.0">
+            <placeholder>
+                <Label text="Il n'y a aucun contenu dans le tableau"/>
+            </placeholder>
+            <columns>
+                <TableColumn fx:id="numCol" prefWidth="39.0" text="id"/>
+                <TableColumn fx:id="nameCol" prefWidth="72.0" text="Nom"/>
+                <TableColumn fx:id="fid" prefWidth="72" text="formid"/>
+                <TableColumn fx:id="date" prefWidth="78.0" text="Date"/>
+                <TableColumn fx:id="java" prefWidth="68.0" text="Java"/>
+                <TableColumn fx:id="sar" prefWidth="68.0" text="SAR"/>
+                <TableColumn fx:id="marketing" prefWidth="90.0" text="Marketing"/>
+                <TableColumn fx:id="ml" prefWidth="68.0" text="ML"/>
+            </columns>
+        </TableView>
+        <Button layoutX="750.0" layoutY="80.0" mnemonicParsing="false" onAction="#onShowClick"
+                text="Afficher des notes"/>
+        <Button id="add" fx:id="add" layoutX="750.0" layoutY="140.0" mnemonicParsing="false" onAction="#onaddclick"
+                text="Ajouter des notes"/>
+        <Button id="del" fx:id="del" layoutX="750.0" layoutY="200.0" mnemonicParsing="false" onAction="#onDelClick"
+                text="Supprimer des notes"/>
+        <Button fx:id="find" layoutX="750.0" layoutY="260.0" mnemonicParsing="false" onAction="#onSearchClick"
+                text="Recherche des notes"/>
+        <Button fx:id="showform" layoutX="750.0" layoutY="320.0" mnemonicParsing="false" onAction="#onShowFormClick"
+                text="Gestion des Forms"/>
+        <Button fx:id="showgroup" layoutX="750.0" layoutY="380" mnemonicParsing="false" onAction="#onShowGroupClick"
+                text="Gestion des Binomes"/>
+        <Button fx:id="showproject" layoutX="750.0" layoutY="440.0" mnemonicParsing="false" onAction="#onShowProjectClick"
+                text="Gestions des projets"/>
+        <Button layoutX="750.0" layoutY="500.0" mnemonicParsing="false" onAction="#onModifyInfClick"
+                text="Modification des infos"/>
+        <Button fx:id="exit" layoutX="750.0" layoutY="560.0" mnemonicParsing="false"
+                text="Se Déconnecter"/>
+    </children>
+</Pane>

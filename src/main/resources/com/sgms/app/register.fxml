@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0"
+      prefWidth="615.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sgms.controller.RegisterController">
+    <children>
+        <Label layoutX="150.0" layoutY="14.0" text="Enregistrement de l'utilisateur">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button blendMode="MULTIPLY" defaultButton="true" layoutX="260.0" layoutY="442.0" mnemonicParsing="false"
+                onAction="#onRegisterClick" prefHeight="42.0" prefWidth="89.0" text="S'inscrire">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Button>
+        <Label layoutX="120.0" layoutY="78.0" text="Identifiant:">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="120.0" layoutY="132.0" prefHeight="32.0" prefWidth="68.0" text="Nom:">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="100.0" layoutY="186.0" text="Mot de passe:">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="id" layoutX="280.0" layoutY="78.0" prefHeight="30.0" prefWidth="150.0"/>
+        <TextField fx:id="name" layoutX="280.0" layoutY="132.0" prefHeight="30.0" prefWidth="150.0"/>
+        <PasswordField fx:id="password" layoutX="280.0" layoutY="186.0" prefHeight="30.0" prefWidth="150.0"/>
+        <ComboBox fx:id="job" layoutX="300.0" layoutY="298.0" prefHeight="30.0" prefWidth="89.0" promptText="Choisir"/>
+        <Label layoutX="120.0" layoutY="297.0" text="Typologie:">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+    </children>
+</Pane>

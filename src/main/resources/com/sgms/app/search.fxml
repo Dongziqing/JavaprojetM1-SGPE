@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0"
+      prefWidth="711.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.sgms.controller.SearchController">
+    <children>
+        <Label layoutX="200.0" layoutY="14.0" text="Recherche de note">
+            <font>
+                <Font size="26.0"/>
+            </font>
+        </Label>
+        <Label layoutX="10.0" layoutY="60.0" text="Veuillez saisir les termes de recherche suivants:">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="content" layoutX="361.0" layoutY="60.0"/>
+        <TableView fx:id="gradeTable" layoutX="-4.0" layoutY="100.0" prefHeight="416.0" prefWidth="718.0">
+            <placeholder>
+                <Label text="Il n'y a aucun contenu dans le tableau"/>
+            </placeholder>
+            <columns>
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Nom"/>
+                <TableColumn fx:id="date" prefWidth="96.0" text="Date"/>
+                <TableColumn fx:id="java" prefWidth="68.0" text="Java"/>
+                <TableColumn fx:id="sar" prefWidth="69.0" text="SAR"/>
+                <TableColumn fx:id="marketing" prefWidth="100.0" text="Marketing"/>
+                <TableColumn fx:id="ml" prefWidth="130.0" text="Machine Learning"/>
+            </columns>
+        </TableView>
+        <Button layoutX="530.0" layoutY="57.0" mnemonicParsing="false" onAction="#onSearchClick" prefHeight="30.0"
+                prefWidth="82.0" text="Chercher"/>
+        <Button fx:id="del" layoutX="620.0" layoutY="57.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0"
+                text="Delete" onAction="#onDelClick"/>
+    </children>
+</Pane>
